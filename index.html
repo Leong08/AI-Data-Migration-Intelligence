@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1020" />
+  <title>AMIS — Migration Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>AMIS</strong><small>Migration Intelligence</small></div>
+      </div>
+
+      <div class="workspace-switcher">
+        <div class="workspace-icon">AP</div>
+        <div><small>WORKSPACE</small><strong>Atlas Platform</strong></div>
+        <span class="chevron">⌄</span>
+      </div>
+
+      <nav class="nav-group">
+        <div class="nav-label">Workspace</div>
+        <button class="nav-item active" data-view="overview"><span class="nav-icon">◈</span>Overview</button>
+        <button class="nav-item" data-view="pipelines"><span class="nav-icon">↗</span>Migration pipelines</button>
+        <button class="nav-item" data-view="catalog"><span class="nav-icon">▦</span>Data catalog</button>
+        <button class="nav-item" data-view="lineage"><span class="nav-icon">⌁</span>Lineage explorer</button>
+      </nav>
+
+      <nav class="nav-group">
+        <div class="nav-label">Operations</div>
+        <button class="nav-item" data-view="approvals"><span class="nav-icon">✓</span>Approvals <b class="nav-badge">3</b></button>
+        <button class="nav-item" data-view="activity"><span class="nav-icon">◷</span>Activity log</button>
+        <button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="status-card"><span class="pulse"></span><div><strong>All systems operational</strong><small>Last checked 24 sec ago</small></div></div>
+        <div class="user-card"><div class="avatar">LC</div><div><strong>Leong Chen</strong><small>Platform architect</small></div><span>•••</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs"><span>Atlas Platform</span><i>/</i><strong id="breadcrumb">Overview</strong></div>
+        <div class="top-actions">
+          <div class="command-search">⌘ <span>Search anything</span><kbd>⌘ K</kbd></div>
+          <button class="icon-button" aria-label="Notifications">♢<em></em></button>
+          <button class="icon-button">?</button>
+          <button class="primary-button" id="newMigrationBtn">＋ New migration</button>
+        </div>
+      </header>
+
+      <div class="content" id="content">
+        <section class="view active" id="overview">
+          <div class="page-heading">
+            <div><div class="eyebrow">TUESDAY, NOVEMBER 10, 2026</div><h1>Good morning, Leong <span>✦</span></h1><p>Here’s the pulse of your migration estate.</p></div>
+            <div class="heading-actions"><button class="secondary-button">↧ Export report</button><button class="filter-button">Last 30 days　⌄</button></div>
+          </div>
+
+          <div class="metric-grid">
+            <article class="metric-card"><div class="metric-top"><span>ACTIVE MIGRATIONS</span><span class="metric-icon blue">↗</span></div><div class="metric-value">12</div><div class="metric-foot"><span class="trend positive">↗ 18.2%</span><span>vs. last month</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>DATA PROCESSED</span><span class="metric-icon violet">◉</span></div><div class="metric-value">4.86 <small>TB</small></div><div class="metric-foot"><span class="trend positive">↗ 24.7%</span><span>vs. last month</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>SUCCESS RATE</span><span class="metric-icon green">✓</span></div><div class="metric-value">98.4<small>%</small></div><div class="metric-foot"><span class="trend positive">↗ 2.1%</span><span>vs. last month</span></div></article>
+            <article class="metric-card"><div class="metric-top"><span>TIME SAVED</span><span class="metric-icon amber">ϟ</span></div><div class="metric-value">1,248 <small>hrs</small></div><div class="metric-foot"><span class="trend positive">↗ 31.6%</span><span>vs. last month</span></div></article>
+          </div>
+
+          <div class="main-grid">
+            <section class="panel pipeline-panel">
+              <div class="panel-header"><div><h2>Migration pipeline</h2><p>Live status across your active workloads</p></div><button class="text-button" data-view-target="pipelines">View all <span>→</span></button></div>
+              <div class="pipeline-list">
+                <div class="pipeline-row"><div class="pipeline-name"><div class="source-logo oracle">O</div><div><strong>Core banking modernization</strong><small>Oracle → PostgreSQL · 2.4 TB</small></div></div><div class="stage-progress"><div class="stage-labels"><span class="done">Discovery</span><span class="done">Synthesis</span><span class="current">Generation</span><span>Validation</span><span>Cutover</span></div><div class="progress-track"><span style="width: 68%"></span></div></div><div class="row-status"><strong>68%</strong><small>On track</small></div><button class="more">•••</button></div>
+                <div class="pipeline-row"><div class="pipeline-name"><div class="source-logo mainframe">⌁</div><div><strong>Claims processing platform</strong><small>COBOL → Java · 860 GB</small></div></div><div class="stage-progress"><div class="stage-labels"><span class="done">Discovery</span><span class="done">Synthesis</span><span class="done">Generation</span><span class="current">Validation</span><span>Cutover</span></div><div class="progress-track"><span style="width: 84%"></span></div></div><div class="row-status"><strong>84%</strong><small>On track</small></div><button class="more">•••</button></div>
+                <div class="pipeline-row"><div class="pipeline-name"><div class="source-logo mysql">my</div><div><strong>Customer data unification</strong><small>MySQL → Snowflake · 1.6 TB</small></div></div><div class="stage-progress"><div class="stage-labels"><span class="done">Discovery</span><span class="current">Synthesis</span><span>Generation</span><span>Validation</span><span>Cutover</span></div><div class="progress-track"><span style="width: 42%"></span></div></div><div class="row-status"><strong>42%</strong><small>Needs review</small></div><button class="more">•••</button></div>
+                <div class="pipeline-row"><div class="pipeline-name"><div class="source-logo sap">S</div><div><strong>Supply chain analytics</strong><small>SAP HANA → BigQuery · 420 GB</small></div></div><div class="stage-progress"><div class="stage-labels"><span class="done">Discovery</span><span class="current">Synthesis</span><span>Generation</span><span>Validation</span><span>Cutover</span></div><div class="progress-track"><span style="width: 35%"></span></div></div><div class="row-status"><strong>35%</strong><small>On track</small></div><button class="more">•••</button></div>
+              </div>
+            </section>
+            <aside class="side-column">
+              <section class="panel health-panel"><div class="panel-header"><div><h2>Migration health</h2><p>Across all active projects</p></div><span class="health-score">A−</span></div><div class="health-chart"><div class="donut"><div><strong>94</strong><small>/ 100</small></div></div><div class="health-legend"><span><i class="dot green-dot"></i>Healthy <b>9</b></span><span><i class="dot amber-dot"></i>At risk <b>2</b></span><span><i class="dot red-dot"></i>Blocked <b>1</b></span></div></div></section>
+              <section class="panel approval-panel"><div class="panel-header"><div><h2>Needs your attention</h2><p>3 items awaiting review</p></div><span class="count-badge">3</span></div><div class="approval-item"><div class="approval-avatar">CR</div><div><strong>Customer PII mapping</strong><small>Customer data unification · 12 min ago</small></div><button class="arrow">→</button></div><div class="approval-item"><div class="approval-avatar amber-avatar">!</div><div><strong>Risk threshold exceeded</strong><small>Claims processing · 1 hr ago</small></div><button class="arrow">→</button></div><div class="approval-item"><div class="approval-avatar violet-avatar">DB</div><div><strong>Schema diff approval</strong><small>Core banking · 3 hrs ago</small></div><button class="arrow">→</button></div></section>
+            </aside>
+          </div>
+
+          <section class="panel activity-panel"><div class="panel-header"><div><h2>Recent activity</h2><p>Real-time events from your migration workflows</p></div><button class="text-button" data-view-target="activity">View activity log <span>→</span></button></div><div class="activity-list"><div class="activity-row"><span class="activity-icon green-bg">✓</span><div><strong>Validation completed</strong><span>Claims processing platform passed 142 automated checks</span></div><time>8 min ago</time></div><div class="activity-row"><span class="activity-icon blue-bg">↗</span><div><strong>Generation started</strong><span>Core banking modernization moved to code generation</span></div><time>26 min ago</time></div><div class="activity-row"><span class="activity-icon amber-bg">!</span><div><strong>Approval requested</strong><span>Customer PII mapping requires your review</span></div><time>42 min ago</time></div></div></section>
+        </section>
+
+        <section class="view" id="pipelines"><div class="page-heading"><div><div class="eyebrow">OPERATIONS</div><h1>Migration pipelines</h1><p>Monitor, govern, and orchestrate every migration workload.</p></div><button class="primary-button" id="newMigrationBtn2">＋ New migration</button></div><div class="filter-bar"><div class="tabs"><button class="tab active">All <b>12</b></button><button class="tab">Running <b>8</b></button><button class="tab">Needs review <b>3</b></button><button class="tab">Completed <b>24</b></button></div><div class="filter-button">Filter　⌄</div></div><div class="panel table-panel"><table><thead><tr><th>Migration</th><th>Source → Target</th><th>Progress</th><th>Owner</th><th>Status</th><th>Updated</th><th></th></tr></thead><tbody><tr><td><strong>Core banking modernization</strong><small>mig_8F2A · 2.4 TB</small></td><td>Oracle <span>→</span> PostgreSQL</td><td><div class="table-progress"><span style="width:68%"></span></div><small>68%</small></td><td>Leong Chen</td><td><span class="status-pill blue-pill">Generating</span></td><td>4 min ago</td><td>•••</td></tr><tr><td><strong>Claims processing platform</strong><small>mig_2C91 · 860 GB</small></td><td>COBOL <span>→</span> Java</td><td><div class="table-progress"><span style="width:84%"></span></div><small>84%</small></td><td>Sarah Wu</td><td><span class="status-pill green-pill">Validating</span></td><td>8 min ago</td><td>•••</td></tr><tr><td><strong>Customer data unification</strong><small>mig_7B34 · 1.6 TB</small></td><td>MySQL <span>→</span> Snowflake</td><td><div class="table-progress amber-progress"><span style="width:42%"></span></div><small>42%</small></td><td>Leong Chen</td><td><span class="status-pill amber-pill">Needs review</span></td><td>12 min ago</td><td>•••</td></tr><tr><td><strong>Supply chain analytics</strong><small>mig_4D80 · 420 GB</small></td><td>SAP HANA <span>→</span> BigQuery</td><td><div class="table-progress"><span style="width:35%"></span></div><small>35%</small></td><td>Marcus Lee</td><td><span class="status-pill blue-pill">Synthesizing</span></td><td>27 min ago</td><td>•••</td></tr></tbody></table></div></section>
+
+        <section class="view" id="catalog"><div class="page-heading"><div><div class="eyebrow">GOVERNANCE</div><h1>Data catalog</h1><p>One trusted inventory for schemas, entities, and sensitive fields.</p></div><button class="secondary-button">＋ Register source</button></div><div class="metric-grid catalog-metrics"><article class="metric-card"><div class="metric-top"><span>REGISTERED ASSETS</span><span class="metric-icon blue">▦</span></div><div class="metric-value">8,492</div><div class="metric-foot"><span class="trend positive">↗ 8.4%</span><span>this quarter</span></div></article><article class="metric-card"><div class="metric-top"><span>DATA PRODUCTS</span><span class="metric-icon violet">◈</span></div><div class="metric-value">186</div><div class="metric-foot"><span class="trend positive">↗ 12</span><span>this month</span></div></article><article class="metric-card"><div class="metric-top"><span>SENSITIVE FIELDS</span><span class="metric-icon amber">⌁</span></div><div class="metric-value">1,024</div><div class="metric-foot"><span class="trend negative">↗ 4.2%</span><span>requires review</span></div></article></div><div class="panel table-panel"><div class="panel-header"><div><h2>Connected sources</h2><p>Data systems discovered in your workspace</p></div><div class="command-search compact">⌕ <span>Search catalog</span></div></div><table><thead><tr><th>Source</th><th>Type</th><th>Assets</th><th>Last scan</th><th>Health</th></tr></thead><tbody><tr><td><strong>Atlas Core Oracle</strong><small>Production · FINANCE</small></td><td><span class="source-tag oracle-tag">Oracle</span></td><td>3,248 tables</td><td>12 min ago</td><td><span class="status-pill green-pill">Healthy</span></td></tr><tr><td><strong>Claims Mainframe</strong><small>Legacy · OPERATIONS</small></td><td><span class="source-tag cobol-tag">COBOL</span></td><td>1,842 programs</td><td>34 min ago</td><td><span class="status-pill amber-pill">Review</span></td></tr><tr><td><strong>Customer 360</strong><small>Analytics · MARKETING</small></td><td><span class="source-tag mysql-tag">MySQL</span></td><td>2,194 tables</td><td>1 hr ago</td><td><span class="status-pill green-pill">Healthy</span></td></tr></tbody></table></div></section>
+
+        <section class="view" id="lineage"><div class="page-heading"><div><div class="eyebrow">INTELLIGENCE</div><h1>Lineage explorer</h1><p>Trace every field from source to target with confidence.</p></div><div class="heading-actions"><button class="secondary-button">↧ Export graph</button><button class="filter-button">Core banking modernization　⌄</button></div></div><div class="lineage-layout"><div class="panel lineage-canvas"><div class="canvas-toolbar"><span>● Live lineage map</span><div><button>＋</button><button>−</button><button>⊙</button></div></div><div class="flow-map"><div class="flow-column"><small>SOURCE</small><div class="flow-node source-node"><b>Atlas Core Oracle</b><span>3,248 tables</span></div><div class="flow-node source-node"><b>Customer schema</b><span>184 entities</span></div></div><div class="flow-lines"><span></span><span></span><span></span></div><div class="flow-column"><small>TRANSFORMATION</small><div class="flow-node transform-node"><b>PII masking</b><span>98.6% confidence</span></div><div class="flow-node transform-node"><b>Type normalization</b><span>100% confidence</span></div></div><div class="flow-lines"><span></span><span></span><span></span></div><div class="flow-column"><small>TARGET</small><div class="flow-node target-node"><b>PostgreSQL cluster</b><span>1,284 tables</span></div><div class="flow-node target-node"><b>Customer domain</b><span>96 entities</span></div></div></div></div><aside class="panel lineage-details"><div class="panel-header"><div><h2>Selected field</h2><p>cust_profile.email</p></div><span class="confidence">98%</span></div><div class="field-detail"><span class="detail-label">SOURCE FIELD</span><strong>CRM.CUST_PROFILE.EMAIL_ADDR</strong><small>VARCHAR2 (240) · Nullable</small></div><div class="mapping-arrow">↓ <span>AI inferred mapping</span></div><div class="field-detail target-detail"><span class="detail-label">TARGET FIELD</span><strong>customer.email</strong><small>TEXT · Nullable</small></div><div class="detail-divider"></div><div class="detail-row"><span>Transformation</span><b>PII masking</b></div><div class="detail-row"><span>Rule status</span><span class="status-pill green-pill">Approved</span></div><div class="detail-row"><span>Evidence</span><b>3 sources</b></div><button class="secondary-button full-width">View transformation rule</button></aside></div></section>
+
+        <section class="view" id="approvals"><div class="page-heading"><div><div class="eyebrow">GOVERNANCE</div><h1>Approvals</h1><p>Review decisions that keep your migrations safe and explainable.</p></div><span class="review-summary"><b>3</b> pending decisions</span></div><div class="approval-grid"><article class="panel approval-card"><div class="approval-card-top"><span class="approval-type high">HIGH RISK</span><time>12 min ago</time></div><h2>Customer PII mapping</h2><p>Review 24 inferred transformations for sensitive customer fields before generation can continue.</p><div class="approval-meta"><span>Customer data unification</span><span>24 fields · 98% confidence</span></div><div class="approval-actions"><button class="secondary-button">Inspect mapping</button><button class="primary-button approve-btn">Approve</button></div></article><article class="panel approval-card"><div class="approval-card-top"><span class="approval-type medium">MEDIUM RISK</span><time>1 hr ago</time></div><h2>Risk threshold exceeded</h2><p>Claims processing contains 3 transaction branches with low semantic confidence.</p><div class="approval-meta"><span>Claims processing platform</span><span>Risk score 26 / 40</span></div><div class="approval-actions"><button class="secondary-button">View evidence</button><button class="primary-button approve-btn">Approve</button></div></article><article class="panel approval-card"><div class="approval-card-top"><span class="approval-type low">SCHEMA CHANGE</span><time>3 hrs ago</time></div><h2>Schema diff approval</h2><p>12 target columns will be renamed and 4 nullable constraints will change.</p><div class="approval-meta"><span>Core banking modernization</span><span>16 changes detected</span></div><div class="approval-actions"><button class="secondary-button">Review diff</button><button class="primary-button approve-btn">Approve</button></div></article></div></section>
+
+        <section class="view" id="activity"><div class="page-heading"><div><div class="eyebrow">OPERATIONS</div><h1>Activity log</h1><p>A complete audit trail across agents, approvals, and executions.</p></div><button class="secondary-button">↧ Download log</button></div><div class="panel activity-full"><div class="activity-filter"><div class="tabs"><button class="tab active">All events</button><button class="tab">Agent runs</button><button class="tab">Approvals</button><button class="tab">Executions</button></div><div class="filter-button">Today　⌄</div></div><div class="activity-list large"><div class="activity-row"><span class="activity-icon green-bg">✓</span><div><strong>Validation completed</strong><span>Claims processing platform passed 142 automated checks</span><small>Agent 8 · Execution sandbox · run_2C91</small></div><time>8 min ago</time></div><div class="activity-row"><span class="activity-icon blue-bg">↗</span><div><strong>Generation started</strong><span>Core banking modernization moved to code generation</span><small>Agent 7 · Workflow orchestrator · run_8F2A</small></div><time>26 min ago</time></div><div class="activity-row"><span class="activity-icon amber-bg">!</span><div><strong>Approval requested</strong><span>Customer PII mapping requires your review</span><small>Agent 6 · Risk assessment · run_7B34</small></div><time>42 min ago</time></div><div class="activity-row"><span class="activity-icon violet-bg">✦</span><div><strong>Business rules synthesized</strong><span>184 rules extracted from customer schema</span><small>Agent 4 · Synthesis phase · run_7B34</small></div><time>1 hr ago</time></div></div></div></section>
+
+        <section class="view" id="settings"><div class="page-heading"><div><div class="eyebrow">WORKSPACE</div><h1>Settings</h1><p>Configure workspace policies, integrations, and execution guardrails.</p></div><button class="primary-button">Save changes</button></div><div class="settings-grid"><div class="panel settings-nav"><button class="setting-link active">Workspace profile</button><button class="setting-link">Team & access</button><button class="setting-link">Integrations</button><button class="setting-link">AI policies</button><button class="setting-link">Notifications</button></div><div class="panel settings-form"><h2>Workspace profile</h2><p>Basic information shown across your migration workspace.</p><label>Workspace name<input value="Atlas Platform" /></label><label>Workspace identifier<input value="atlas-platform-prod" /></label><label>Default target database<select><option>PostgreSQL 16</option><option>Snowflake</option><option>BigQuery</option></select></label><div class="form-divider"></div><h2>Execution guardrails</h2><div class="toggle-row"><div><strong>Require approval for destructive actions</strong><small>Pause before DROP, TRUNCATE, or irreversible schema changes.</small></div><button class="toggle on"><span></span></button></div><div class="toggle-row"><div><strong>Mask sensitive data in sandbox</strong><small>Apply PII masking before loading test slices.</small></div><button class="toggle on"><span></span></button></div></div></div></section>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast"><span>✓</span><div><strong>Action completed</strong><small>Your change has been recorded.</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
